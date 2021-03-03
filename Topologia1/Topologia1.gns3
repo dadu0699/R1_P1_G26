@@ -288,10 +288,11 @@
                             "vlan": 56
                         },
                         {
+                            "ethertype": "",
                             "name": "Ethernet3",
                             "port_number": 3,
                             "type": "access",
-                            "vlan": 1
+                            "vlan": 36
                         },
                         {
                             "name": "Ethernet4",
@@ -438,9 +439,10 @@
                             "vlan": 1
                         },
                         {
+                            "ethertype": "",
                             "name": "Ethernet1",
                             "port_number": 1,
-                            "type": "access",
+                            "type": "dot1q",
                             "vlan": 1
                         },
                         {
@@ -451,10 +453,11 @@
                             "vlan": 36
                         },
                         {
+                            "ethertype": "",
                             "name": "Ethernet3",
                             "port_number": 3,
                             "type": "access",
-                            "vlan": 1
+                            "vlan": 46
                         },
                         {
                             "name": "Ethernet4",
@@ -533,10 +536,11 @@
                             "vlan": 46
                         },
                         {
+                            "ethertype": "",
                             "name": "Ethernet3",
                             "port_number": 3,
                             "type": "access",
-                            "vlan": 1
+                            "vlan": 56
                         },
                         {
                             "name": "Ethernet4",
@@ -662,6 +666,6 @@
     },
     "type": "topology",
     "variables": null,
-    "version": "2.2.17",
+    "version": "2.2.18",
     "zoom": 83
 }
