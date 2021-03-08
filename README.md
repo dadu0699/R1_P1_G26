@@ -31,25 +31,25 @@ Para realizar la configuración necesaria de las vlans y los enlaces troncales e
 
 <div align="center">
     <img src="./assets/images/Topo1/1.png" width="400">
-    <p align="center">Configuracion SW1</p>
+    <p align="center">Configuración SW1</p>
 </div>
 <br/>
 
 <div align="center">
     <img src="./assets/images/Topo1/2.png" width="400">
-    <p align="center">Configuracion SW2</p>
+    <p align="center">Configuración SW2</p>
 </div>
 <br/>
 
 <div align="center">
     <img src="./assets/images/Topo1/3.png" width="400">
-    <p align="center">Configuracion SW3</p>
+    <p align="center">Configuración SW3</p>
 </div>
 <br/>
 
 <div align="center">
     <img src="./assets/images/Topo1/4.png" width="400">
-    <p align="center">Configuracion SW4</p>
+    <p align="center">Configuración SW4</p>
 </div>
 
 ### **Configuración de VPCS**
@@ -61,19 +61,19 @@ ip <IP Address> <Subnet Mask> <Default Gateway>
 
 <div align="center">
     <img src="./assets/images/Topo1/5.png" width="400">
-    <p align="center">Configuracion VPCS Contabilidad</p>
+    <p align="center">Configuración VPCS Contabilidad</p>
 </div>
 <br/>
 
 <div align="center">
     <img src="./assets/images/Topo1/6.png" width="400">
-    <p align="center">Configuracion VPCS Ventas</p>
+    <p align="center">Configuración VPCS Ventas</p>
 </div>
 <br/>
 
 <div align="center">
     <img src="./assets/images/Topo1/7.png" width="400">
-    <p align="center">Configuracion VPCS Informática</p>
+    <p align="center">Configuración VPCS Informática</p>
 </div>
 
 ### **Computadoras virtualizadas**
@@ -151,5 +151,57 @@ Luego de haber configurado las ip es necesario cambiar la configuración de las 
 <br/>
 
 ## **Topología 2**<a name="idTopo2"></a>
+Esta topología está compuesta por:
+- 3 computadoras virtualizadas en VMware
+- 3 Switch
+- 1 Cloud
+
+### **Configuración de Switchs**
+Como en la [Topología 1](#idTopo1) es necesario configurar cada uno de los switch para generar la comunicación  
+
+<div align="center">
+    <img src="./assets/images/Topo2/1.png" width="400">
+    <p align="center">Configuración SW5</p>
+</div>
+<br/>
+
+<div align="center">
+    <img src="./assets/images/Topo2/2.png" width="400">
+    <p align="center">Configuración SW6</p>
+</div>
+<br/>
+
+<div align="center">
+    <img src="./assets/images/Topo2/3.png" width="400">
+    <p align="center">Configuración SW7</p>
+</div>
+
+### **Computadoras virtualizadas**
+#### GNS3
+Es necesario realizar los pasos de la [Topología 1](#idTopo1) para configurar cada equipo y adicionalmente se debe configurar un servidor apache para desplegar paginas web. Para esto debemos seguir los siguientes pasos
+
+* Debemos descargar los archivos que contienen la pagina web
+<div align="center">
+    <img src="./assets/images/Topo2/11.png" width="400">
+    <p align="center">Archivos pagina web informática</p>
+</div>
+
+* En una terminal se deben ejecutar los siguientes comandos, para instalar el servidor apache
+
+```bash
+sudo apt-get update
+sudo apt-get install apache2
+```
+
+* Cada uno de los siguientes comandos son para crear, copiar y desplegar la pagina web en el servidor
+
+```bash
+sudo mkdir -p /var/www/html/<carpeta>
+sudo chown -R $USER:$USER /var/www/html/<carpeta>
+sudo chmod -R 755 /var/www/html/<carpeta>
+sudo cp -r /home/user/Descargas/<carpeta>/* /var/www/html/<carpeta>/
+sudo chown -R $USER:$USER /var/www/html/<carpeta>/assets
+sudo chmod -R 755 /var/www/html/<carpeta>/assets
+```
 
 ## **Configuración VPN**<a name="idVPN"></a>
