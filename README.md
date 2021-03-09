@@ -205,3 +205,114 @@ sudo chmod -R 755 /var/www/html/<carpeta>/assets
 ```
 
 ## **Configuración VPN**<a name="idVPN"></a>
+
+### Google Cloud Platform 
+
+Para la creacion de nuestro servidor VPN se utilizo una maquina virtual en Google Cloud. 
+
+* Creamos un regla de Firewall para nuestro proyecto. 
+
+<div align="center">
+    <img src="./assets/images/VPN/1.png" width="400">
+    <p align="center">Nueva regla de Firewall para el puerto 1194</p>
+</div>
+
+* Creamos una instancia de Maquina Virtual 
+
+<div align="center">
+    <img src="./assets/images/VPN/2.png" width="400">
+    <p align="center">Nombre de Maquina Virtual</p>
+</div>
+
+<div align="center">
+    <img src="./assets/images/VPN/3.png" width="400">
+    <p align="center">Sistema Operativo Ubuntu </p>
+</div>
+
+<div align="center">
+    <img src="./assets/images/VPN/4.png" width="400">
+    <p align="center">Configuracion de etiqueta de red</p>
+</div>
+
+* Ejecutar los siguientes comandos en la Maquina Virtual 
+
+```bash
+sudo apt-get update 
+sudo apt-get upgrade
+```
+
+* Instalar OpenVPN 
+
+```bash
+sudo wget https://skiddow.github.io/OpenVPN/openvpn-install.sh
+sudo bash openvpn-install.sh
+```
+
+*  Ingresar la Direccion Privada 
+
+<div align="center">
+    <img src="./assets/images/VPN/9.png" width="400">
+    <p align="center">Ingresar IP interna asignada por GCP</p>
+</div>
+
+* Ingresar la Direccion Publica 
+
+<div align="center">
+    <img src="./assets/images/VPN/10.png" width="400">
+    <p align="center">Ingresar IP externa asignada por GCP</p>
+</div>
+
+* Elegir el protocolo a utilizar 
+
+<div align="center">
+    <img src="./assets/images/VPN/11.png" width="400">
+    <p align="center">Protocolo UDP</p>
+</div>
+
+*  Elegir el puerto que utilizara OpenVPN 
+
+<div align="center">
+    <img src="./assets/images/VPN/12.png" width="400">
+    <p align="center">Puerto 1194 configurado en la regla de Firewall</p>
+</div>
+
+* Elegir DNS a utilizar 
+
+<div align="center">
+    <img src="./assets/images/VPN/13.png" width="400">
+    <p align="center">Se esta usando Google</p>
+</div>
+
+*  Nombre del cliente que se va a conectar 
+
+<div align="center">
+    <img src="./assets/images/VPN/14.png" width="400">
+    <p align="center">client1</p>
+</div>
+
+* Una vez finalizado el proceso de creacion del cliente se descarga el archivo generado.  
+
+
+<div align="center">
+    <img src="./assets/images/VPN/16.png" width="400">
+    <p align="center">Descargar archivo de client1</p>
+</div>
+
+*  Creamos otro cliente
+
+<div align="center">
+    <img src="./assets/images/VPN/17.png" width="400">
+    <p align="center">Opcion 1</p>
+</div>
+
+<div align="center">
+    <img src="./assets/images/VPN/18.png" width="400">
+    <p align="center">client2</p>
+</div>
+
+* Una vez finalizado el proceso de creacion del cliente se descarga el archivo generado.  
+
+<div align="center">
+    <img src="./assets/images/VPN/19.png" width="400">
+    <p align="center">Descargar archivo de client2</p>
+</div>
