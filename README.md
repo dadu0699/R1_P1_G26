@@ -19,6 +19,15 @@
 |    Si   	| Contabilidad 2      	|     SW4     	|   192.168.26.30 	|  56  	|
 |    Si   	| Server Contabilidad 	|     SW6     	|  192.168.26.150 	|  56  	|
 
+## **Tablas de configuraciones de la nube**<a name="idTBConf"></a>
+
+| TOPOLOGIA |     LOCAL PORT     	|  REMOTE HOST	|   REMOTE PORT  	|
+|:-------:	|:-------------------:	|:-----------:	|:---------------:	|
+|    1   	|         3223      	|    10.8.0.2  	|       5671     	|
+|    2   	|         5671      	|    10.8.0.3   |       3223    	| 
+
+
+
 ## **Topología 1**<a name="idTopo1"></a>
 Esta topología está compuesta por:
 - 3 VPCS
@@ -149,6 +158,35 @@ Luego de haber configurado las ip es necesario cambiar la configuración de las 
     <p align="center">Configuración tarjeta de red</p>
 </div>
 <br/>
+
+
+### **Consulta de Servidores Web**
+
+* Departamenro de Informática
+
+<div align="center">
+    <img src="./assets/images/Topo1/14.png" width="400">
+    <p align="center">Sitio: 192.168.126.150/informatica/</p>
+</div>
+<br/>
+
+* Departamenro de Ventas
+
+<div align="center">
+    <img src="./assets/images/Topo1/13.png" width="400">
+    <p align="center">Sitio: 192.168.226.150/ventas/</p>
+</div>
+<br/>
+
+* Departamenro de Contabilidad
+
+<div align="center">
+    <img src="./assets/images/Topo1/12.png" width="400">
+    <p align="center">Sitio: 192.168.26.150/contabilidad/</p>
+</div>
+<br/>
+
+
 
 ## **Topología 2**<a name="idTopo2"></a>
 Esta topología está compuesta por:
