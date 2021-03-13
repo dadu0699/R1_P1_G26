@@ -295,7 +295,7 @@ sudo bash openvpn-install.sh
     <p align="center">Ingresar IP interna asignada por GCP</p>
 </div>
 
-* Ingresar la Dirección Publica.
+* Ingresar la Dirección Pública.
 
 <div align="center">
     <img src="./assets/images/VPN/10.png" width="400">
@@ -320,7 +320,7 @@ sudo bash openvpn-install.sh
 
 <div align="center">
     <img src="./assets/images/VPN/13.png" width="400">
-    <p align="center">Se esta usando Google</p>
+    <p align="center">Se utiliza Google</p>
 </div>
 
 *  Nombre del cliente que se va a conectar. 
